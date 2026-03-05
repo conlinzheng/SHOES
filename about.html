@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 鞋类产品展示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">SHOE FACTORY</div>
+            <nav class="nav-menu">
+                <a href="index.html" data-i18n="nav.products">产品列表</a>
+                <a href="about.html" class="active" data-i18n="nav.about">关于我们</a>
+                <a href="contact.html" data-i18n="nav.contact">联系方式</a>
+            </nav>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="zh">中文</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="ko">한국어</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-i18n="about.title">关于我们</h1>
+            <p data-i18n="about.subtitle">专业品质，值得信赖</p>
+        </div>
+    </section>
+
+    <!-- 内容区域 -->
+    <main class="container">
+        <section class="about-content">
+            <div class="about-section">
+                <h2 data-i18n="about.companyTitle">公司简介</h2>
+                <p id="company-intro">我们是一家专注于鞋类产品制造的专业公司，拥有多年的行业经验和精湛的生产工艺。我们致力于为全球客户提供高品质、时尚舒适的鞋类产品。</p>
+            </div>
+
+            <div class="about-section">
+                <h2 data-i18n="about.philosophyTitle">我们的理念</h2>
+                <ul class="feature-list" id="philosophy-list">
+                    <li><strong>品质至上</strong> - 严格把控每一个生产环节，确保产品质量</li>
+                    <li><strong>创新设计</strong> - 紧跟时尚潮流，不断推出创新产品</li>
+                    <li><strong>客户满意</strong> - 以客户需求为导向，提供优质服务</li>
+                    <li><strong>环保生产</strong> - 采用环保材料，践行可持续发展</li>
+                </ul>
+            </div>
+
+            <div class="about-section">
+                <h2 data-i18n="about.advantageTitle">我们的优势</h2>
+                <div class="advantages">
+                    <div class="advantage-item">
+                        <div class="advantage-icon">✓</div>
+                        <h3 data-i18n="about.exp">经验丰富</h3>
+                        <p data-i18n="about.expDesc">多年行业经验，专业团队</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">✓</div>
+                        <h3 data-i18n="about.quality">品质保证</h3>
+                        <p data-i18n="about.qualityDesc">严格质量检测体系</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">✓</div>
+                        <h3 data-i18n="about.fast">快速交付</h3>
+                        <p data-i18n="about.fastDesc">高效生产，准时发货</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">✓</div>
+                        <h3 data-i18n="about.service">优质服务</h3>
+                        <p data-i18n="about.serviceDesc">专业售后支持</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footer-text">&copy; 2025 SHOE FACTORY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+</body>
+</html>

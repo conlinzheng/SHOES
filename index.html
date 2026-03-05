@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鞋类产品展示 - 专业制造</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">SHOE FACTORY</div>
+            <nav class="nav-menu">
+                <a href="index.html" class="active" data-i18n="nav.products">产品列表</a>
+                <a href="about.html" data-i18n="nav.about">关于我们</a>
+                <a href="contact.html" data-i18n="nav.contact">联系方式</a>
+            </nav>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="zh">中文</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="ko">한국어</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-i18n="pageTitle">产品展示</h1>
+            <p data-i18n="pageSubtitle">精选鞋类产品，品质保证</p>
+        </div>
+    </section>
+
+    <!-- 产品列表容器 - 动态生成 -->
+    <main class="container" id="product-container">
+        <!-- 产品将通过JavaScript自动加载 -->
+    </main>
+
+    <!-- 产品详情弹窗 -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-body">
+                <!-- 左侧图片 -->
+                <div class="modal-images">
+                    <div class="main-image-container">
+                        <img id="modal-main-image" src="" alt="" onclick="openLightbox(this.src)">
+                        <div class="zoom-hint" data-i18n="modal.zoomHint">点击查看大图</div>
+                    </div>
+                    <div class="modal-gallery" id="modal-gallery">
+                        <!-- 相关图片将动态加载 -->
+                    </div>
+                </div>
+
+                <!-- 右侧信息 -->
+                <div class="modal-info">
+                    <div class="modal-series" id="modal-series"></div>
+                    <h2 id="modal-product-name"></h2>
+                    <p class="modal-description" id="modal-description"></p>
+                    
+                    <!-- 产品详细信息 -->
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <span class="spec-label" data-i18n="spec.upperMaterial">鞋面材质：</span>
+                            <span class="spec-value" id="spec-upper"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label" data-i18n="spec.innerMaterial">内里材质：</span>
+                            <span class="spec-value" id="spec-inner"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label" data-i18n="spec.soleMaterial">鞋底材质：</span>
+                            <span class="spec-value" id="spec-sole"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label" data-i18n="spec.moq">起订量：</span>
+                            <span class="spec-value" id="spec-moq"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label" data-i18n="spec.deliveryTime">交货周期：</span>
+                            <span class="spec-value" id="spec-delivery"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button class="contact-btn" onclick="window.location.href='contact.html'">
+                            <span data-i18n="modal.contactUs">联系我们</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 大图查看器 -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <span class="close-lightbox" onclick="closeLightbox(event)">&times;</span>
+            <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" title="上一张">❮</button>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" title="下一张">❯</button>
+            <div class="lightbox-counter" id="lightbox-counter"></div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footer-text">&copy; 2025 SHOE FACTORY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

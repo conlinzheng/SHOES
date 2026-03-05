@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配置管理 - 鞋类产品展示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">SHOE FACTORY</div>
+            <nav class="nav-menu">
+                <a href="index.html">产品列表</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系方式</a>
+                <a href="index.html">← 返回首页</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>配置管理</h1>
+            <p>管理网站内容和产品信息</p>
+        </div>
+    </section>
+
+    <!-- 配置内容 -->
+    <main class="container">
+        <div class="admin-content">
+            <!-- 选项卡导航 -->
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="basic">基本设置</button>
+                <button class="tab-btn" data-tab="products">产品管理</button>
+                <button class="tab-btn" data-tab="about">关于我们</button>
+                <button class="tab-btn" data-tab="contact">联系方式</button>
+            </div>
+
+            <!-- 基本设置 -->
+            <section class="admin-section tab-content active" id="tab-basic">
+                <h2>基本设置</h2>
+                <div class="form-group">
+                    <label>网站名称</label>
+                    <input type="text" id="site-name" placeholder="SHOE FACTORY">
+                </div>
+                <div class="form-group">
+                    <label>页面标题</label>
+                    <input type="text" id="page-title" placeholder="产品展示">
+                </div>
+                <div class="form-group">
+                    <label>页面副标题</label>
+                    <input type="text" id="page-subtitle" placeholder="精选鞋类产品，品质保证">
+                </div>
+                <div class="form-group">
+                    <label>页脚文本</label>
+                    <input type="text" id="footer-text" placeholder="&copy; 2025 SHOE FACTORY. All rights reserved.">
+                </div>
+            </section>
+
+            <!-- 产品管理 -->
+            <section class="admin-section tab-content" id="tab-products">
+                <h2>产品系列管理</h2>
+                <div id="series-container">
+                    <!-- 系列将通过JavaScript动态加载 -->
+                </div>
+                <button class="add-series-btn" onclick="addSeries()">+ 添加系列</button>
+            </section>
+
+            <!-- 关于我们 -->
+            <section class="admin-section tab-content" id="tab-about">
+                <h2>关于我们</h2>
+                <div class="form-group">
+                    <label>公司简介</label>
+                    <textarea id="company-intro" rows="5" placeholder="请输入公司简介"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>企业理念（每行一条，使用" - "分隔标题和描述）</label>
+                    <textarea id="philosophy" rows="6" placeholder="品质至上 - 严格把控每一个生产环节&#10;创新设计 - 紧跟时尚潮流&#10;客户满意 - 以客户需求为导向&#10;环保生产 - 采用环保材料"></textarea>
+                </div>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="admin-section tab-content" id="tab-contact">
+                <h2>联系方式</h2>
+                <div class="i18n-info">
+                    <p>💡 提示：在此处输入中文内容，保存后系统会自动生成英文和韩文翻译。</p>
+                </div>
+                <div class="form-group">
+                    <label>公司地址（中文）</label>
+                    <input type="text" id="contact-address" placeholder="中国 · 某某市某某区某某街道123号">
+                </div>
+                <div class="form-group">
+                    <label>联系电话</label>
+                    <input type="text" id="contact-phone" placeholder="+86 xxx xxxx xxxx">
+                </div>
+                <div class="form-group">
+                    <label>电子邮箱</label>
+                    <input type="text" id="contact-email" placeholder="contact@shoefactory.com">
+                </div>
+                <div class="form-group">
+                    <label>工作时间（支持HTML换行，中文）</label>
+                    <textarea id="contact-hours" rows="3" placeholder="周一至周五: 9:00 - 18:00<br>周六至周日: 休息"></textarea>
+                </div>
+            </section>
+
+            <!-- 操作按钮 -->
+            <div class="admin-actions">
+                <button class="save-btn" onclick="saveConfig()">💾 保存配置</button>
+                <button class="preview-btn" onclick="previewConfig()">👁️ 预览效果</button>
+                <button class="reset-btn" onclick="resetConfig()">🔄 重置配置</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SHOE FACTORY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

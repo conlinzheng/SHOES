@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配置测试</title>
+</head>
+<body>
+    <h1>配置测试页面</h1>
+    <div id="output"></div>
+
+    <script src="common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const output = document.getElementById('output');
+
+            output.innerHTML = `
+                <h2>配置信息：</h2>
+                <pre>${JSON.stringify(siteConfig, null, 2)}</pre>
+
+                <h2>当前语言：</h2>
+                <p>${currentLang}</p>
+
+                <h2>公司简介测试：</h2>
+                <p>zh: ${getI18nText(siteConfig.about.companyIntro_i18n, 'zh')}</p>
+                <p>en: ${getI18nText(siteConfig.about.companyIntro_i18n, 'en')}</p>
+                <p>ko: ${getI18nText(siteConfig.about.companyIntro_i18n, 'ko')}</p>
+
+                <h2>理念测试：</h2>
+                <p>zh: ${JSON.stringify(getI18nText(siteConfig.about.philosophy_i18n, 'zh'))}</p>
+                <p>en: ${JSON.stringify(getI18nText(siteConfig.about.philosophy_i18n, 'en'))}</p>
+                <p>ko: ${JSON.stringify(getI18nText(siteConfig.about.philosophy_i18n, 'ko'))}</p>
+
+                <h2>工作时间测试：</h2>
+                <p>zh: ${getI18nText(siteConfig.contact.hours_i18n, 'zh')}</p>
+                <p>en: ${getI18nText(siteConfig.contact.hours_i18n, 'en')}</p>
+                <p>ko: ${getI18nText(siteConfig.contact.hours_i18n, 'ko')}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

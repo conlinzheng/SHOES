@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 鞋类产品展示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">SHOE FACTORY</div>
+            <nav class="nav-menu">
+                <a href="index.html" data-i18n="nav.products">产品列表</a>
+                <a href="about.html" data-i18n="nav.about">关于我们</a>
+                <a href="contact.html" class="active" data-i18n="nav.contact">联系方式</a>
+            </nav>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="zh">中文</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <span>|</span>
+                <button class="lang-btn" data-lang="ko">한국어</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-i18n="contact.title">联系我们</h1>
+            <p data-i18n="contact.subtitle">期待与您的合作</p>
+        </div>
+    </section>
+
+    <!-- 内容区域 -->
+    <main class="container">
+        <section class="contact-content">
+            <div class="contact-grid">
+                <!-- 联系信息 -->
+                <div class="contact-info">
+                    <h2 data-i18n="contact.infoTitle">联系方式</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h3 data-i18n="contact.address">公司地址</h3>
+                            <p id="contact-address">中国 · 某某市某某区某某街道123号</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <h3 data-i18n="contact.phone">联系电话</h3>
+                            <p id="contact-phone">+86 xxx xxxx xxxx</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <h3 data-i18n="contact.email">电子邮箱</h3>
+                            <p id="contact-email">contact@shoefactory.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-text">
+                            <h3 data-i18n="contact.hours">工作时间</h3>
+                            <p id="contact-hours">周一至周五: 9:00 - 18:00<br>周六至周日: 休息</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 留言表单 -->
+                <div class="contact-form-section">
+                    <h2 data-i18n="contact.formTitle">在线留言</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label data-i18n="contact.name">姓名</label>
+                            <input type="text" id="form-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="contact.emailLabel">邮箱</label>
+                            <input type="email" id="form-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="contact.phoneLabel">电话</label>
+                            <input type="tel" id="form-phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="contact.message">留言内容</label>
+                            <textarea id="form-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" data-i18n="contact.submit">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footer-text">&copy; 2025 SHOE FACTORY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情 - 鞋类产品展示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">SHOE FACTORY</div>
+            <nav class="nav-menu">
+                <a href="index.html">产品列表</a>
+                <a href="about.html">关于我们</a>
+                <a href="contact.html">联系方式</a>
+                <a href="admin.html" class="admin-link">⚙️ 配置管理</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 产品详情容器 -->
+    <main class="container">
+        <div class="product-detail">
+            <button class="back-btn" onclick="window.location.href='index.html'">← 返回产品列表</button>
+            
+            <div class="detail-content">
+                <!-- 左侧主图 -->
+                <div class="detail-main-image">
+                    <img id="main-image" src="" alt="" onclick="openLightbox(this.src)">
+                    <div class="zoom-hint">点击查看大图</div>
+                </div>
+
+                <!-- 右侧信息 -->
+                <div class="detail-info">
+                    <h1 id="product-name"></h1>
+                    <p id="product-series" class="series-tag"></p>
+                    <p id="product-description" class="description"></p>
+                    
+                    <div class="detail-actions">
+                        <button class="contact-btn" onclick="window.location.href='contact.html'">联系咨询</button>
+                        <button class="back-list-btn" onclick="window.location.href='index.html'">查看更多产品</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 多角度图片 -->
+            <div class="detail-gallery" id="detail-gallery">
+                <h2>产品展示</h2>
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- 相关图片将动态加载 -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 大图查看器 -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p id="footer-text">&copy; 2025 SHOE FACTORY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="product-detail.js"></script>
+</body>
+</html>

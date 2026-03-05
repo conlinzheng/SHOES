@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试多语言</title>
+    <script>
+        // 清除localStorage
+        localStorage.clear();
+        console.log('localStorage已清除');
+
+        // 重新加载about.html
+        setTimeout(() => {
+            window.location.href = 'about.html';
+        }, 1000);
+    </script>
+</head>
+<body>
+    <h1>清除缓存中...</h1>
+    <p>1秒后将跳转到关于我们页面</p>
+</body>
+</html>
